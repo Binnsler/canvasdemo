@@ -2,6 +2,7 @@ import React from "react";
 import Example1 from "examples/Example1.js";
 import Example2 from "examples/Example2.js";
 import Example3 from "examples/Example3.js";
+import Example4 from "examples/Example4.js";
 import Example5 from "examples/Example5.js";
 
 const App = () => (
@@ -12,6 +13,7 @@ const App = () => (
         <Example1/>
         <Example2/>
         <Example3/>
+        <Example4/>
         <Example5/>
     </div>
 );

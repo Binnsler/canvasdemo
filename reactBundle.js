@@ -273,6 +273,50 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ExampleHeader = function ExampleHeader(props) {
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "h1",
+            null,
+            props.title
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "code" },
+            _react2.default.createElement(
+                "pre",
+                null,
+                _react2.default.createElement(
+                    "code",
+                    null,
+                    props.code
+                )
+            )
+        )
+    );
+};
+
+exports.default = ExampleHeader;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -366,7 +410,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -406,50 +450,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ExampleHeader = function ExampleHeader(props) {
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "h1",
-            null,
-            props.title
-        ),
-        _react2.default.createElement(
-            "div",
-            { className: "code" },
-            _react2.default.createElement(
-                "pre",
-                null,
-                _react2.default.createElement(
-                    "code",
-                    null,
-                    props.code
-                )
-            )
-        )
-    );
-};
-
-exports.default = ExampleHeader;
 
 /***/ }),
 /* 5 */
@@ -663,7 +663,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(3);
+var emptyFunction = __webpack_require__(4);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -953,7 +953,7 @@ var _Sprite = __webpack_require__(5);
 
 var _Sprite2 = _interopRequireDefault(_Sprite);
 
-var _PlayerMissle = __webpack_require__(43);
+var _PlayerMissle = __webpack_require__(45);
 
 var _PlayerMissle2 = _interopRequireDefault(_PlayerMissle);
 
@@ -1043,7 +1043,7 @@ var _Sprite = __webpack_require__(5);
 
 var _Sprite2 = _interopRequireDefault(_Sprite);
 
-var _Explosion = __webpack_require__(44);
+var _Explosion = __webpack_require__(46);
 
 var _Explosion2 = _interopRequireDefault(_Explosion);
 
@@ -1157,7 +1157,7 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, null), do
  * LICENSE file in the root directory of this source tree.
  */
 
-var h=__webpack_require__(2),n="function"===typeof Symbol&&Symbol.for,p=n?Symbol.for("react.element"):60103,q=n?Symbol.for("react.portal"):60106,r=n?Symbol.for("react.fragment"):60107,t=n?Symbol.for("react.strict_mode"):60108,u=n?Symbol.for("react.profiler"):60114,v=n?Symbol.for("react.provider"):60109,w=n?Symbol.for("react.context"):60110,x=n?Symbol.for("react.forward_ref"):60112,y=n?Symbol.for("react.suspense"):60113;n&&Symbol.for("react.suspense_list");
+var h=__webpack_require__(3),n="function"===typeof Symbol&&Symbol.for,p=n?Symbol.for("react.element"):60103,q=n?Symbol.for("react.portal"):60106,r=n?Symbol.for("react.fragment"):60107,t=n?Symbol.for("react.strict_mode"):60108,u=n?Symbol.for("react.profiler"):60114,v=n?Symbol.for("react.provider"):60109,w=n?Symbol.for("react.context"):60110,x=n?Symbol.for("react.forward_ref"):60112,y=n?Symbol.for("react.suspense"):60113;n&&Symbol.for("react.suspense_list");
 var z=n?Symbol.for("react.memo"):60115,aa=n?Symbol.for("react.lazy"):60116;n&&Symbol.for("react.fundamental");n&&Symbol.for("react.responder");n&&Symbol.for("react.scope");var A="function"===typeof Symbol&&Symbol.iterator;
 function B(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}var C={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},D={};
 function E(a,b,c){this.props=a;this.context=b;this.refs=D;this.updater=c||C}E.prototype.isReactComponent={};E.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error(B(85));this.updater.enqueueSetState(this,a,b,"setState")};E.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};function F(){}F.prototype=E.prototype;function G(a,b,c){this.props=a;this.context=b;this.refs=D;this.updater=c||C}var H=G.prototype=new F;
@@ -1197,7 +1197,7 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(2);
+var _assign = __webpack_require__(3);
 var checkPropTypes = __webpack_require__(7);
 
 // TODO: this is special because it gets imported during build.
@@ -3585,7 +3585,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),l=__webpack_require__(8),B=__webpack_require__(2),C=__webpack_require__(3),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(14);
+var aa=__webpack_require__(0),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(4),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(14);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -3886,8 +3886,8 @@ var React = __webpack_require__(0);
 var invariant = __webpack_require__(27);
 var warning = __webpack_require__(28);
 var ExecutionEnvironment = __webpack_require__(8);
-var _assign = __webpack_require__(2);
-var emptyFunction = __webpack_require__(3);
+var _assign = __webpack_require__(3);
+var emptyFunction = __webpack_require__(4);
 var EventListener = __webpack_require__(9);
 var getActiveElement = __webpack_require__(10);
 var shallowEqual = __webpack_require__(11);
@@ -19337,7 +19337,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(3);
+var emptyFunction = __webpack_require__(4);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -19578,6 +19578,10 @@ var _Example7 = __webpack_require__(40);
 
 var _Example8 = _interopRequireDefault(_Example7);
 
+var _Example9 = __webpack_require__(42);
+
+var _Example10 = _interopRequireDefault(_Example9);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
@@ -19593,7 +19597,7 @@ var App = function App() {
                 "This is a demonstration of the capabilities of the Canvas element. Most individual demos show a code snippet but for the full code please visit the ",
                 _react2.default.createElement(
                     "a",
-                    { href: "https://github.com/Binnsler" },
+                    { href: "https://github.com/Binnsler/canvasdemo" },
                     "Github"
                 ),
                 " repo."
@@ -19602,7 +19606,8 @@ var App = function App() {
         _react2.default.createElement(_Example2.default, null),
         _react2.default.createElement(_Example4.default, null),
         _react2.default.createElement(_Example6.default, null),
-        _react2.default.createElement(_Example8.default, null)
+        _react2.default.createElement(_Example8.default, null),
+        _react2.default.createElement(_Example10.default, null)
     );
 };
 
@@ -19625,7 +19630,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ExampleHeader = __webpack_require__(4);
+var _ExampleHeader = __webpack_require__(2);
 
 var _ExampleHeader2 = _interopRequireDefault(_ExampleHeader);
 
@@ -19660,12 +19665,12 @@ var Example1 = function (_React$Component) {
     _createClass(Example1, [{
         key: "render",
         value: function render() {
-            var code = "\n            // Grab canvas element and select 2d context to get Canvas 2D API\n            var canvas = document.getElementById( \"canvas\" );\n            var context = canvas.getContext( \"2d\" );\n\n            // Create image, set up drawing in load callback, set image src\n            this.image = new Image();\n\n            this.image.onload = () => {\n                this.context.drawImage(\n                    this.image,\n                    10,  // x where sprite starts on spritesheet\n                    35,  // y where sprite starts on spritesheet\n                    250, // width on spritesheet\n                    125, // height on spritesheet\n                    20,  // x origin on canvas\n                    20,  // y origin on canvas\n                    100, // width to draw sprite on canvas\n                    50   // height to draw sprite on canvas\n                );\n\n                // Change fill color\n                this.context.fillStyle = \"#000000\";\n\n                // Draw rectangle at origin 0, 0 with height and width of 30px\n                this.context.fillRect( 0, 0, 30, 30 );\n\n                this.context.fillStyle = \"#ff021f\";\n                this.context.fillRect( 30, 30, 30, 30 );\n\n                // Write text at 60, 60\n                this.context.fillText( \"Hello World\", 60, 60 );\n            };\n\n            // Select spritesheet\n            this.image.src = \"/src/content/ufos.png\";\n        ";
+            var code = "\n            // Grab canvas element and select 2d context to get Canvas 2D API\n            var canvas = document.getElementById( \"canvas\" );\n            var context = canvas.getContext( \"2d\" );\n\n            // Draw alien ship from /src/content/roswellShip.png\n            this.context.drawImage(\n                this.image,\n                70,\n                70,\n                135,\n                73\n            );\n\n            // Change fill color and draw black square\n            this.context.fillStyle = \"#000000\";\n            this.context.fillRect( 0, 0, 30, 30 );\n\n            // Draw red square\n            this.context.fillStyle = \"#ff021f\";\n            this.context.fillRect( 30, 30, 30, 30 );\n\n            // Write text at 60, 60\n            this.context.font = \"20px Arial\";\n            this.context.fillStyle = \"#000000\";\n            this.context.fillText( \"Hello World\", 65, 60 );\n        ";
 
             return _react2.default.createElement(
                 "div",
                 { className: "example" },
-                _react2.default.createElement(_ExampleHeader2.default, { title: "Basic Functionality", code: code }),
+                _react2.default.createElement(_ExampleHeader2.default, { title: "Canvas Basic Functionality", code: code }),
                 _react2.default.createElement(
                     "div",
                     { className: "flex" },
@@ -19708,7 +19713,7 @@ var example1 = function example1(canvas, context) {
     this.image = new Image();
 
     this.image.onload = function () {
-        _this.context.drawImage(_this.image, 10, 35, 250, 125, 60, 60, 100, 50);
+        _this.context.drawImage(_this.image, 70, 70, 135, 73);
 
         // Change fill color
         _this.context.fillStyle = "#000000";
@@ -19720,10 +19725,12 @@ var example1 = function example1(canvas, context) {
         _this.context.fillRect(30, 30, 30, 30);
 
         // Write text at 60, 60
-        _this.context.fillText("Hello World", 60, 60);
+        _this.context.font = "20px Arial";
+        _this.context.fillStyle = "#000000";
+        _this.context.fillText("Hello World", 65, 60);
     };
 
-    this.image.src = "/src/content/ufos.png";
+    this.image.src = "/src/content/roswellShip.png";
 };
 
 exports.default = example1;
@@ -19745,7 +19752,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ExampleHeader = __webpack_require__(4);
+var _ExampleHeader = __webpack_require__(2);
 
 var _ExampleHeader2 = _interopRequireDefault(_ExampleHeader);
 
@@ -19780,12 +19787,12 @@ var Example2 = function (_React$Component) {
     _createClass(Example2, [{
         key: "render",
         value: function render() {
-            var code = "\n            // By combining the basic functionality of drawing text, images, and shapes,\n            // with a little additional logic we can create something as complex as\n            // a graphing engine that accepts a dataset. Throw in hover detection\n            // and we can make that graph interactive.\n\n            const data = {\n                \"data\": [\n                    {\n                        \"label\": \"Mathematics\",\n                        \"values\": {\n                            \"First\": 13,\n                            \"Second\": 83,\n                            \"Third\": 24,\n                            \"Fourth\": 54\n                        }\n                    },\n                    {\n                        \"label\": \"Science\",\n                        \"values\": {\n                            \"First\": 74,\n                            \"Second\": 21,\n                            \"Third\": 71,\n                            \"Fourth\": 44\n                        }\n                    },\n                    {\n                        \"label\": \"Reading\",\n                        \"values\": {\n                            \"First\": 90,\n                            \"Second\": 22,\n                            \"Third\": 71,\n                            \"Fourth\": 10\n                        }\n                    }\n                ],\n                \"legend\": {\n                    \"First\": \"#ff0000\",\n                    \"Second\": \"#0400ff\",\n                    \"Third\": \"#13bf00\",\n                    \"Fourth\": \"#ffe900\"\n                }\n            }\n\n            let example = new example2Canvas( this.canvas, data, {} );\n\n            example.initialize();\n\n        ";
+            var code = "\n            // By combining the basic functionality of drawing text, images, and shapes,\n            // with a little additional logic we can create something as complex as\n            // a graphing engine that accepts a dataset. Throw in hover detection\n            // and we can make that graph interactive.\n\n            const data = {\n                \"data\": [\n                    {\n                        \"label\": \"Mathematics\",\n                        \"values\": {\n                            \"First\": 13,\n                            \"Second\": 83,\n                            \"Third\": 24,\n                            \"Fourth\": 54\n                        }\n                    },\n                    {\n                        \"label\": \"Science\",\n                        \"values\": {\n                            \"First\": 74,\n                            \"Second\": 21,\n                            \"Third\": 71,\n                            \"Fourth\": 44\n                        }\n                    },\n                    {\n                        \"label\": \"Reading\",\n                        \"values\": {\n                            \"First\": 90,\n                            \"Second\": 22,\n                            \"Third\": 71,\n                            \"Fourth\": 10\n                        }\n                    }\n                ],\n                \"legend\": {\n                    \"First\": \"#ff0000\",\n                    \"Second\": \"#0400ff\",\n                    \"Third\": \"#13bf00\",\n                    \"Fourth\": \"#ffe900\"\n                }\n            }\n        ";
 
             return _react2.default.createElement(
                 "div",
                 { className: "example" },
-                _react2.default.createElement(_ExampleHeader2.default, { title: "Basic Functionality - Extended", code: code }),
+                _react2.default.createElement(_ExampleHeader2.default, { title: "Canvas Basic Functionality - Extended", code: code }),
                 _react2.default.createElement(
                     "div",
                     { className: "flex" },
@@ -20244,7 +20251,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ExampleHeader = __webpack_require__(4);
+var _ExampleHeader = __webpack_require__(2);
 
 var _ExampleHeader2 = _interopRequireDefault(_ExampleHeader);
 
@@ -20292,7 +20299,7 @@ var Example3 = function (_React$Component) {
     }, {
         key: "render",
         value: function render() {
-            var code = "\n            // By using the browsers requestAnimationFrame() and calculating\n            // the current time we can create an animation loop that uses\n            // time to make calculations\n\n            const Example3 = function example3( canvas ){\n                this.canvas = canvas;\n                this.context = this.canvas.getContext( \"2d\" );\n                this.lastFrameTime = 0;\n\n                this.initialize = () => {\n                    this.loop();\n                };\n\n                this.loop = () => {\n                    this.currentFrameTime = Date.now();\n\n                    this.draw();\n\n                    this.lastFrameTime = this.currentFrameTime;\n\n                    requestAnimationFrame( this.loop );\n                };\n\n                this.draw = () => {\n                    this.gameTime = Math.floor( this.currentFrameTime );\n\n                    // ...animation logic\n                };\n            };\n\n        ";
+            var code = "\n            // By using the browsers requestAnimationFrame() and calculating\n            // the current time we can create an animation loop that uses\n            // time to make calculations\n\n            const Example3 = function example3( canvas ){\n                this.canvas = canvas;\n                this.context = this.canvas.getContext( \"2d\" );\n                this.lastFrameTime = 0;\n                this.x = 0;\n                this.y = 140;\n                this.direction = \"right\";\n\n                this.initialize = () => {\n                    this.setSpeed( 1 );\n                    this.loop();\n                };\n\n                this.loop = () => {\n                    let elapsed;\n\n                    this.currentFrameTime = Date.now();\n\n                    elapsed = this.currentFrameTime - this.lastFrameTime;\n\n                    if( elapsed > this.fps ){\n                        this.draw();\n                        this.lastFrameTime = this.currentFrameTime;\n                    }\n\n                    requestAnimationFrame( this.loop );\n                };\n\n                this.draw = () => {\n                    // ...animation logic\n                };\n            };\n\n        ";
 
             return _react2.default.createElement(
                 "div",
@@ -20423,11 +20430,185 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ExampleHeader = __webpack_require__(4);
+var _ExampleHeader = __webpack_require__(2);
 
 var _ExampleHeader2 = _interopRequireDefault(_ExampleHeader);
 
-var _game = __webpack_require__(41);
+var _example = __webpack_require__(41);
+
+var _example2 = _interopRequireDefault(_example);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Example4 = function (_React$Component) {
+    _inherits(Example4, _React$Component);
+
+    function Example4(props) {
+        _classCallCheck(this, Example4);
+
+        var _this = _possibleConstructorReturn(this, (Example4.__proto__ || Object.getPrototypeOf(Example4)).call(this, props));
+
+        _this.canvas = null;
+
+        _this.setCanvasRef = function (element) {
+            _this.canvas = element;
+        };
+        return _this;
+    }
+
+    _createClass(Example4, [{
+        key: "render",
+        value: function render() {
+            var code = "\n            // Using requestAnimationFrame(), images created by a designer,\n            // and a bit of logic, we can make a simple animation\n        ";
+
+            return _react2.default.createElement(
+                "div",
+                { className: "example" },
+                _react2.default.createElement(_ExampleHeader2.default, { title: "requestAnimationFrame - Advanced", code: code }),
+                _react2.default.createElement(
+                    "div",
+                    { className: "flex" },
+                    _react2.default.createElement("canvas", { ref: this.setCanvasRef, width: "900", height: "450" })
+                )
+            );
+        }
+    }, {
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            this.example = new _example2.default(this.canvas);
+
+            this.example.initialize();
+        }
+    }]);
+
+    return Example4;
+}(_react2.default.Component);
+
+;
+
+exports.default = Example4;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var Example4 = function example4(canvas) {
+    var _this = this;
+
+    this.canvas = canvas;
+    this.context = this.canvas.getContext("2d");
+    this.lastFrameTime = 0;
+    this.backgroundOffset = 0;
+    this.fps = 1000 / 60;
+    this.alienY = 250;
+    this.alienDirection = "up";
+
+    this.initialize = function () {
+        _this.background = new Image();
+        _this.alien = new Image();
+        _this.shadow = new Image();
+
+        _this.background.onload = function () {
+            _this.loop();
+        };
+
+        _this.shadow.src = "/src/content/roswellShadow.png";
+        _this.alien.src = "/src/content/roswellShip.png";
+        _this.background.src = "/src/content/roswellLandscape.png";
+    };
+
+    this.loop = function () {
+        var elapsed = void 0;
+
+        _this.currentFrameTime = Date.now();
+
+        elapsed = _this.currentFrameTime - _this.lastFrameTime;
+
+        if (elapsed > _this.fps) {
+            _this.draw();
+            _this.lastFrameTime = _this.currentFrameTime;
+        }
+
+        requestAnimationFrame(_this.loop);
+    };
+
+    this.draw = function () {
+        _this.context.clearRect(0, 0, _this.canvas.width, _this.canvas.height);
+
+        // Draw two backgrounds
+        _this.context.drawImage(_this.background, _this.backgroundOffset, 0);
+
+        _this.context.drawImage(_this.background, _this.backgroundOffset + 2252, 0);
+
+        // Draw alien
+        _this.context.drawImage(_this.alien, 50, _this.alienY);
+
+        // Draw shadow
+        _this.context.drawImage(_this.shadow, 115, 400);
+
+        _this.calculateBackgroundOffset();
+        _this.calculateAlienY();
+    };
+
+    this.calculateBackgroundOffset = function () {
+        if (_this.backgroundOffset == -2252) {
+            _this.backgroundOffset = 0;
+        } else {
+            _this.backgroundOffset = _this.backgroundOffset - 2;
+        }
+    };
+
+    this.calculateAlienY = function () {
+        if (_this.alienDirection == "down") {
+            _this.alienY = _this.alienY + 0.5;
+        } else if (_this.alienDirection == "up") {
+            _this.alienY = _this.alienY - 0.5;
+        }
+
+        if (_this.alienDirection == "down" && _this.alienY > 250) {
+            _this.alienDirection = "up";
+        } else if (_this.alienDirection == "up" && _this.alienY < 230) {
+            _this.alienDirection = "down";
+        }
+    };
+};
+
+exports.default = Example4;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ExampleHeader = __webpack_require__(2);
+
+var _ExampleHeader2 = _interopRequireDefault(_ExampleHeader);
+
+var _game = __webpack_require__(43);
 
 var _game2 = _interopRequireDefault(_game);
 
@@ -20463,7 +20644,7 @@ var Example5 = function (_React$Component) {
             return _react2.default.createElement(
                 "div",
                 { className: "example" },
-                _react2.default.createElement(_ExampleHeader2.default, { title: "requestAnimationFrame - Complex", code: code }),
+                _react2.default.createElement(_ExampleHeader2.default, { title: "requestAnimationFrame - Very Advanced", code: code }),
                 _react2.default.createElement(
                     "div",
                     { className: "flex" },
@@ -20489,7 +20670,7 @@ var Example5 = function (_React$Component) {
 exports.default = Example5;
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20499,7 +20680,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _engine = __webpack_require__(42);
+var _engine = __webpack_require__(44);
 
 var _engine2 = _interopRequireDefault(_engine);
 
@@ -20511,11 +20692,11 @@ var _Enemy = __webpack_require__(16);
 
 var _Enemy2 = _interopRequireDefault(_Enemy);
 
-var _Level = __webpack_require__(45);
+var _Level = __webpack_require__(47);
 
 var _Level2 = _interopRequireDefault(_Level);
 
-var _spriteData = __webpack_require__(46);
+var _spriteData = __webpack_require__(48);
 
 var _spriteData2 = _interopRequireDefault(_spriteData);
 
@@ -20523,7 +20704,7 @@ var _enemyData = __webpack_require__(17);
 
 var _enemyData2 = _interopRequireDefault(_enemyData);
 
-var _levelData = __webpack_require__(47);
+var _levelData = __webpack_require__(49);
 
 var _levelData2 = _interopRequireDefault(_levelData);
 
@@ -20633,7 +20814,7 @@ var Game = function Game(canvas, context) {
 exports.default = Game;
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20822,7 +21003,7 @@ var Engine = {
 exports.default = Engine;
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20883,7 +21064,7 @@ PlayerMissle.prototype.step = function step(dt) {
 exports.default = PlayerMissle;
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20920,7 +21101,7 @@ Explosion.prototype.step = function (dt) {
 exports.default = Explosion;
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21013,13 +21194,13 @@ Level.prototype.draw = function draw() {};
 exports.default = Level;
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports) {
 
 module.exports = {"ship":{"sx":1,"sy":0,"w":36,"h":42},"missle":{"sx":0,"sy":30,"w":2,"h":10,"frames":1},"explosion":{"sx":0,"sy":64,"w":64,"h":64,"frames":12},"enemyPurple":{"sx":37,"sy":0,"w":42,"h":43,"frames":1},"enemyBee":{"sx":79,"sy":0,"w":37,"h":43,"frames":1},"enemyShip":{"sx":116,"sy":0,"w":42,"h":43,"frames":1},"enemyCircle":{"sx":158,"sy":0,"w":32,"h":33,"frames":1}}
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports) {
 
 module.exports = {"level1":[[0,4000,500,"step"],[6000,13000,800,"ltr"],[12000,16000,400,"circle"],[18200,20000,500,"straight",{"x":150}],[18200,20000,500,"straight",{"x":100}],[18400,20000,500,"straight",{"x":200}],[22000,25000,400,"wiggle",{"x":200}],[22000,25000,400,"wiggle",{"x":125}],[22000,25000,400,"wiggle",{"x":50}]]}

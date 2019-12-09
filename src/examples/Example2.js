@@ -58,16 +58,11 @@ class Example2 extends React.Component{
                     "Fourth": "#ffe900"
                 }
             }
-
-            let example = new example2Canvas( this.canvas, data, {} );
-
-            example.initialize();
-
         `;
 
         return(
             <div className="example">
-                <ExampleHeader title="Basic Functionality - Extended" code={code}/>
+                <ExampleHeader title="Canvas Basic Functionality - Extended" code={code}/>
                 <div className="flex">
                     <canvas ref={this.setCanvasRef} width="600" height="300"></canvas>
                 </div>

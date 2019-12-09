@@ -20,42 +20,32 @@ class Example1 extends React.Component{
             var canvas = document.getElementById( "canvas" );
             var context = canvas.getContext( "2d" );
 
-            // Create image, set up drawing in load callback, set image src
-            this.image = new Image();
+            // Draw alien ship from /src/content/roswellShip.png
+            this.context.drawImage(
+                this.image,
+                70,
+                70,
+                135,
+                73
+            );
 
-            this.image.onload = () => {
-                this.context.drawImage(
-                    this.image,
-                    10,  // x where sprite starts on spritesheet
-                    35,  // y where sprite starts on spritesheet
-                    250, // width on spritesheet
-                    125, // height on spritesheet
-                    20,  // x origin on canvas
-                    20,  // y origin on canvas
-                    100, // width to draw sprite on canvas
-                    50   // height to draw sprite on canvas
-                );
+            // Change fill color and draw black square
+            this.context.fillStyle = "#000000";
+            this.context.fillRect( 0, 0, 30, 30 );
 
-                // Change fill color
-                this.context.fillStyle = "#000000";
+            // Draw red square
+            this.context.fillStyle = "#ff021f";
+            this.context.fillRect( 30, 30, 30, 30 );
 
-                // Draw rectangle at origin 0, 0 with height and width of 30px
-                this.context.fillRect( 0, 0, 30, 30 );
-
-                this.context.fillStyle = "#ff021f";
-                this.context.fillRect( 30, 30, 30, 30 );
-
-                // Write text at 60, 60
-                this.context.fillText( "Hello World", 60, 60 );
-            };
-
-            // Select spritesheet
-            this.image.src = "/src/content/ufos.png";
+            // Write text at 60, 60
+            this.context.font = "20px Arial";
+            this.context.fillStyle = "#000000";
+            this.context.fillText( "Hello World", 65, 60 );
         `;
 
         return(
             <div className="example">
-                <ExampleHeader title="Basic Functionality" code={code}/>
+                <ExampleHeader title="Canvas Basic Functionality" code={code}/>
                 <div className="flex">
                     <canvas ref={this.setCanvasRef} width="300" height="300"></canvas>
                 </div>

@@ -36,24 +36,31 @@ class Example3 extends React.Component{
                 this.canvas = canvas;
                 this.context = this.canvas.getContext( "2d" );
                 this.lastFrameTime = 0;
+                this.x = 0;
+                this.y = 140;
+                this.direction = "right";
 
                 this.initialize = () => {
+                    this.setSpeed( 1 );
                     this.loop();
                 };
 
                 this.loop = () => {
+                    let elapsed;
+
                     this.currentFrameTime = Date.now();
 
-                    this.draw();
+                    elapsed = this.currentFrameTime - this.lastFrameTime;
 
-                    this.lastFrameTime = this.currentFrameTime;
+                    if( elapsed > this.fps ){
+                        this.draw();
+                        this.lastFrameTime = this.currentFrameTime;
+                    }
 
                     requestAnimationFrame( this.loop );
                 };
 
                 this.draw = () => {
-                    this.gameTime = Math.floor( this.currentFrameTime );
-
                     // ...animation logic
                 };
             };

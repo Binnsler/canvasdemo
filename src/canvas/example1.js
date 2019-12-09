@@ -7,14 +7,10 @@ const example1 = function example1( canvas, context ){
     this.image.onload = () => {
         this.context.drawImage(
             this.image,
-            10,
-            35,
-            250,
-            125,
-            60,
-            60,
-            100,
-            50
+            70,
+            70,
+            135,
+            73
         );
 
         // Change fill color
@@ -27,10 +23,12 @@ const example1 = function example1( canvas, context ){
         this.context.fillRect( 30, 30, 30, 30 );
 
         // Write text at 60, 60
-        this.context.fillText( "Hello World", 60, 60 );
+        this.context.font = "20px Arial";
+        this.context.fillStyle = "#000000";
+        this.context.fillText( "Hello World", 65, 60 );
     };
 
-    this.image.src = "/src/content/ufos.png";
+    this.image.src = "/src/content/roswellShip.png";
 };
 
 export default example1;

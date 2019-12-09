@@ -25,7 +25,7 @@ class Example5 extends React.Component{
 
         return(
             <div className="example">
-                <ExampleHeader title="requestAnimationFrame - Complex" code={code}/>
+                <ExampleHeader title="requestAnimationFrame - Very Advanced" code={code}/>
                 <div className="flex">
                     <canvas ref={this.setCanvasRef} width="320" height="480"></canvas>
                 </div>
