@@ -45,7 +45,7 @@ class Example1 extends React.Component{
 
         return(
             <div className="example">
-                <ExampleHeader title="Canvas Basic Functionality" code={code}/>
+                <ExampleHeader title="Canvas API - Basic" code={code}/>
                 <div className="flex">
                     <canvas ref={this.setCanvasRef} width="300" height="300"></canvas>
                 </div>
